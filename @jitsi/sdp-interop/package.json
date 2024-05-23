@@ -1,0 +1,49 @@
+{
+  "name": "@jitsi/sdp-interop",
+  "description": "A simple SDP interoperability layer for Unified Plan/Plan B",
+  "author": "",
+  "version": "1.0.5",
+  "stability": "unstable",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jitsi/sdp-interop.git"
+  },
+  "type": "module",
+  "keywords": [
+    "sdp",
+    "webrtc",
+    "interoperability",
+    "polyfill"
+  ],
+  "main": "./lib/",
+  "scripts": {
+    "test": "node $NODE_DEBUG_OPTION --experimental-modules test/sdp_interop.js",
+    "lint": "eslint .",
+    "validate": "npm ls"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "4.5.0",
+    "sdp-transform": "2.14.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "eslint": "7.27.0",
+    "eslint-config-jitsi": "github:jitsi/eslint-config-jitsi#2.0.0",
+    "eslint-plugin-import": "2.23.4",
+    "precommit-hook": "3.0.0",
+    "qunit-cli": "0.2.0"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "bugs": {
+    "url": "http://github.com/jitsi/sdp-interop/issues"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/jitsi/sdp-interop#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
+}
